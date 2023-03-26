@@ -4,7 +4,8 @@ class Role:
     
     def __init__(self,character_name:str):
         self.character_name = character_name
-        self.approved = []
+        # do not duplicate data 
+        # self.approved = []
 
     @property
     def auditions(self):
@@ -61,17 +62,19 @@ class Role:
     # callback() happens in the ipdb
 
 
-    @property
-    def leadApproved(self):
-        if len(self.approved) == 0:
-            return "no actor has been hired for this role"
-        else:
-            return self.approved[0]
+    #these duplicate data instead of using queries (no good)
 
-    @property
-    def understudyApproved(self):
-        if len(self.approved) >= 2:
-            return self.approved[1]
-        else:
-            print("no actor has been hired for understudy for this role")
+    # @property
+    # def leadApproved(self):
+    #     if len(self.approved) == 0:
+    #         return "no actor has been hired for this role"
+    #     else:
+    #         return self.approved[0]
+
+    # @property
+    # def understudyApproved(self):
+    #     if len(self.approved) >= 2:
+    #         return self.approved[1]
+    #     else:
+    #         print("no actor has been hired for understudy for this role")
 

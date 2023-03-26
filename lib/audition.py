@@ -19,11 +19,13 @@ class Audition:
     
     def call_back(self):
         self.hired = True
-        self.role.approved.append(self.actor)
+        # do not duplicate data 
+        # self.role.approved.append(self.actor)
 
     def youreFired(self):
         self.hired = False
-        self.role.approved.remove(self.actor)
+        # do not duplicate data 
+        # self.role.approved.remove(self.actor)
 
 
 
