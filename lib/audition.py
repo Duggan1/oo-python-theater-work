@@ -21,6 +21,11 @@ class Audition:
         self.hired = True
         self.role.approved.append(self.actor)
 
+    def youreFired(self):
+        self.hired = False
+        self.role.approved.remove(self.actor)
+
+
 
     # i append to approved list to control the order 
     # inside ipdb rather than order of debug.py file
